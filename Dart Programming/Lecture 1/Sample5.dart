@@ -12,6 +12,7 @@
    posi or neg
    odd or even 
  */
+
 import 'dart:io';
 
 void main(){
@@ -22,3 +23,4 @@ void main(){
   // (age  > 0 && age < 100)?print("Human"):print("God");
   (age  > 0 || age < 0)?print("Human"):print("God");
 }
+          

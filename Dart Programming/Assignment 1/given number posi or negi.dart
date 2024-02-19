@@ -11,4 +11,3 @@ void main() {
 
   print("$number is $result.");
 }
-o

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main() {
+  
 
   var principal,rateOfInterest,timeInYears,simpleInterest;
   print("Enter principal amount:");
