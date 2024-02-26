@@ -32,10 +32,10 @@ class MyApp extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container( 
-                      height: 300,
+                      height: 290,
                       width: 100,
                       color: Colors.red,
-                      child: Text("child 1",style: TextStyle(fontWeight: FontWeight.bold)),
+                      child: Center(child: Text("child 1",style: TextStyle(fontWeight: FontWeight.bold))),
                     ),
                     Container(width: 10,),
                     Column(
@@ -45,12 +45,14 @@ class MyApp extends StatelessWidget {
                           height: 140,
                           width: 100,
                           color: Colors.green,
+                           child: Center(child: Text("child 2",style: TextStyle(fontWeight: FontWeight.bold))),
                         ),
                         Container(height: 10,),
                         Container( 
                       height: 140,
                       width: 100,
                       color: Colors.blue,
+                       child: Center(child: Text("child 3",style: TextStyle(fontWeight: FontWeight.bold))),
                     ),
                       ],
                     ),
