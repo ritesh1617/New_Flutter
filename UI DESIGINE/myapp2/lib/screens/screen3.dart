@@ -1,25 +1,23 @@
+
 import 'package:flutter/material.dart';
 
-class Home_Page extends StatelessWidget {
-  var fname;
-  var lname;
-   Home_Page({super.key,required this.fname,required this.lname});
+class home_screen extends StatelessWidget {
+  var name;
+
+  home_screen({super.key,required this.name});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Center(
-            child: Column(
-              children: [
-                Text("Your Full Name is:- $fname $lname ",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-
-              ],
-            ),
-          )
-        ],
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment:CrossAxisAlignment.center,
+            children: [
+            Text("$name")
+          ],),
+        ),
       ),
     );
   }

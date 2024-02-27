@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:myapp2/screens/screen3.dart';
 
@@ -65,7 +64,6 @@ class _screen3State extends State<screen3> {
                 ),
                 ElevatedButton(onPressed: (){
                   if(_fromkey.currentState!.validate()){
-                    Navigator.push(context , MaterialPageRoute(builder: (context) => Home_Page(fname: _fname.text, lname: _laname.text,),));
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Succesfully logged in"),backgroundColor: Colors.green,));
                           
                   }else{
