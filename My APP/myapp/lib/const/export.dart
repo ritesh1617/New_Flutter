@@ -1,0 +1,10 @@
+export 'package:flutter/material.dart';
+export 'package:get/get.dart';
+export 'color.dart';
+export 'images.dart';
+export 'string.dart';
+export 'package:myapp/Custom%20Widget/button.dart';
+export 'package:velocity_x/velocity_x.dart';
+export 'package:myapp/Custom%20Widget/Textfeild.dart';
+export  'package:myapp/Custom%20Widget/bgscreen.dart';
+export 'package:myapp/screens/Home_screen.dart';
