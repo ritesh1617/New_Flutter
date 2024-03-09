@@ -1,16 +1,18 @@
+import 'package:myapp/const/export.dart';
 
-import 'package:flutter/material.dart';
+class home_screen extends StatelessWidget {
+  var email;
+  
+   home_screen({super.key,required this.email});
 
-class home_screen extends StatefulWidget {
-  const home_screen({Key? key}) : super(key: key);
-
-  @override
-  State<home_screen> createState() => _home_screenState();
-}
-
-class _home_screenState extends State<home_screen> {
   @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return Scaffold(
+      body: Column(
+        children: [
+          Text("${email}"),
+        ],
+      ),
+    );
   }
 }

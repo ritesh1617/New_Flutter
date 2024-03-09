@@ -1,14 +1,17 @@
-
 import 'dart:io';
 
 void main() {
-  var num, table,i;
-  stdout.write("Enter your table : ");
+  print("Enter a number to print its table: ");
+  var number = int.parse(stdin.readLineSync() !);
 
-  num = int.parse(stdin.readLineSync()!);
+  if (number < 0) {
+    print("Table is not defined for negative numbers.");
+  } else {
+    print("Table of $number:");
 
-  for (i = 1; i <= 10; i++) {
-    table = num * i;
-    print(table);
+    for (int i = 1; i <= 10; i++) {
+      int num = number * i;
+      print("$number x $i = $num");
+    }
   }
 }

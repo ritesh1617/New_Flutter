@@ -1,16 +1,17 @@
 import 'dart:io';
 
 void main() {
-  int number, remainder, reverseNumber = 0;
+  print("Enter a number: ");
+  var number = int.parse(stdin.readLineSync()!);
+  
+  String Number = number.toString();
+  String reverseNumber = reverseString(Number);
+  
+  int reversedNumber = int.parse(reverseNumber);
+  
+  print("Reverse Number: $reversedNumber");
+}
 
-  stdout.write("Enter an integer: ");
-  number = int.parse(stdin.readLineSync()!);
-
-  while (number != 0) {
-    remainder = number % 10;
-    reverseNumber = reverseNumber * 10 + remainder;
-    number ~/= 10;
-  }
-
-  print("Reversed number: $reverseNumber");
+String reverseString(String input) {
+  return String.fromCharCodes(input.runes.toList().reversed);
 }

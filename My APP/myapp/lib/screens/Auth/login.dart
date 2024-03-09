@@ -5,7 +5,6 @@ import 'package:myapp/Custom%20Widget/Textfeild.dart';
 import 'package:myapp/Custom%20Widget/bgscreen.dart';
 import 'package:myapp/const/export.dart';
 import 'package:myapp/const/settings.dart';
-import 'package:provider/provider.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -51,7 +50,13 @@ class _LoginPageState extends State<LoginPage> {
                     child: textfield(
                       controller: _email,
                       hinttext:emailhint,
-                      value: (value) =>emailValidator(valid_email),
+                      value: (value) {
+                        if(value!=null &&  value!.isEmpty){
+                         return "Email is required";
+                         }else{
+                              return null;
+                         }
+                      },
                     ),
                   ),
                   Padding(
@@ -60,7 +65,13 @@ class _LoginPageState extends State<LoginPage> {
                       
                       controller: _pass,
                       hinttext: passhint,
-                      value: (value) => passwordValidator(valid_pass),
+                      value: (value) {
+                         if(value!=null &&  value!.isEmpty){
+                         return "password is required";
+                         }else{
+                              return null;
+                         }
+                      },
                         
                     ),
                   ),
@@ -82,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                     textcolor: white,
                     onpress: (){
                       if(_formKey.currentState!.validate()){
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>home_screen()));
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>home_screen(email: _email.text,)));
                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(login_message),backgroundColor: green,));
                       }else{
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(login_faild_mess),backgroundColor: red,));
@@ -101,24 +112,20 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-//for emailvalidation
- emailValidator(String value){
-    if(value.isEmpty){
-      return "Email is required";
-    }else if(!emailRequirement.hasMatch(value)){
-      return "Email is not valid";
-    }else{
-      return null;
-    }
-  }  RegExp emailRequirement = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+// //for emailvalidation
+//  emailValidator(String value){
+//     if(value!=null &&  value!.isEmpty){
+//       return "Email is required";
+//     }else{
+//       return null;
+//     }
+//   }  RegExp emailRequirement = RegExp(r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$');
 
-//for password validation
-passwordValidator(String value){
-    if(value.isEmpty){
-      return "Password is required";
-    }else if(!strongPassword.hasMatch(value)){
-    return "Password is not strong enough";
-    }else{
-      return null;
-    }
-  }  RegExp strongPassword = RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$&*~]).{8,}$');
+// //for password validation
+// passwordValidator(String value){
+//     if(value!=null && value!.isEmpty){
+//       return "Password is required";
+//     }else{
+//       return null;
+//     }
+//   }  RegExp strongPassword = RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$&*~]).{8,}$');
