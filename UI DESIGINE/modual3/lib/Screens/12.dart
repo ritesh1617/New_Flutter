@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:modual3/Screens/screen2.dart';
+import 'package:modual3/Screens/Q1/screen2.dart';
 
 class login_page extends StatefulWidget {
   const login_page({super.key});
@@ -64,32 +64,34 @@ final _fromkey=GlobalKey<FormState>();
                         ),
                       ]
                     ),
-                    child: TextFormField(
-                      controller: _email,
-                      keyboardType: TextInputType.emailAddress,
-                      style:TextStyle(color: Colors.greenAccent.shade400) ,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade100)
+                    child: Center(
+                      child: TextFormField(
+                        controller: _email,
+                        keyboardType: TextInputType.emailAddress,
+                        style:TextStyle(color: Colors.greenAccent.shade400) ,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey.shade100)
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey.shade100)
+                            ),
+                            hintText: "EMAIL",
+                            hintStyle: TextStyle(color: Colors.grey),
+                            labelText: "EMAIL",
+                            labelStyle: TextStyle(color: Colors.grey),
+                            prefixIcon: Icon(Icons.email,color: Colors.greenAccent.shade400,)
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade100)
-                          ),
-                          hintText: "EMAIL",
-                          hintStyle: TextStyle(color: Colors.grey),
-                          labelText: "EMAIL",
-                          labelStyle: TextStyle(color: Colors.grey),
-                          prefixIcon: Icon(Icons.email,color: Colors.greenAccent.shade400,)
-                        ),
-                        validator: (value) {
-                          if(value!is Null && value!.isEmpty){
-                            return"Please Enter Your Valid Email";
-                          }else if(regExp_email.hasMatch(value!)){
-                            return null;
-                          }else{
-                            return null;
-                          }
-                        },
+                          validator: (value) {
+                            if(value!=Null && value!.isEmpty){
+                              return"Please Enter Your Valid Email";
+                            }else if(regExp_email.hasMatch(value!)){
+                              return null;
+                            }else{
+                              return null;
+                            }
+                          },
+                      ),
                     ),
                   ),
                    Container(
@@ -105,34 +107,37 @@ final _fromkey=GlobalKey<FormState>();
                         ),
                       ]
                     ),
-                    child: TextFormField(
-                      controller: _pass,
-                      keyboardType: TextInputType.number,
-                      obscureText: true,
-                      obscuringCharacter: "*",
-                      style:TextStyle(color: Colors.greenAccent.shade400) ,
-                        decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade100)
+                    child: Center(
+                      child: TextFormField(
+                        controller: _pass,
+                        keyboardType: TextInputType.number,
+                        obscureText: true,
+                        obscuringCharacter: "*",
+                        style:TextStyle(color: Colors.greenAccent.shade400) ,
+                          decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey.shade100)
+                            ),
+                            
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey.shade100)
+                            ),
+                            hintText: "PASSWORD",
+                            hintStyle: TextStyle(color: Colors.grey),
+                            labelText: "PASSWORD",
+                            labelStyle: TextStyle(color: Colors.grey),
+                            prefixIcon: Icon(Icons.lock,color: Colors.greenAccent.shade400,)
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.grey.shade100)
-                          ),
-                          hintText: "PASSWORD",
-                          hintStyle: TextStyle(color: Colors.grey),
-                          labelText: "PASSWORD",
-                          labelStyle: TextStyle(color: Colors.grey),
-                          prefixIcon: Icon(Icons.lock,color: Colors.greenAccent.shade400,)
-                        ),
-                        validator: (value) {
-                          if(value!is Null && value!.isEmpty){
-                            return"Please Enter Your Valid Email";
-                          }else if(regex.hasMatch(value!)){
-                            return null;
-                          }else{
-                            return null;
-                          }
-                        },
+                          validator: (value) {
+                            if(value!=Null && value!.isEmpty){
+                              return"Please Enter Your Valid Email";
+                            }else if(regex.hasMatch(value!)){
+                              return null;
+                            }else{
+                              return null;
+                            }
+                          },
+                      ),
                     ),
                   ),
                   Padding(
@@ -170,9 +175,8 @@ final _fromkey=GlobalKey<FormState>();
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Don't have account?",style: TextStyle(fontSize: 12),),
-                      SizedBox(width: 2,),
-                      Text("create a new account",style: TextStyle(fontSize: 12,color: Colors.greenAccent.shade400),),
+                      TextButton(onPressed: (){}, child: Text("Don't have account?",style: TextStyle(fontSize: 12),),),
+                      TextButton(onPressed: (){}, child:Text("create a new account",style: TextStyle(fontSize: 12,color: Colors.greenAccent.shade400),),)
                     ],
                   ),
                   
@@ -185,3 +189,4 @@ final _fromkey=GlobalKey<FormState>();
     );
   }
 }
+

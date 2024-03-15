@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp2/1.dart';
+import 'package:myapp2/2.dart';
 import 'package:myapp2/screens/grid_screen.dart';
 import 'package:myapp2/screens/home1.dart';
 import 'package:myapp2/screens/home2.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:grid_screen() ,
+      home:cont() ,
              
 
     );
