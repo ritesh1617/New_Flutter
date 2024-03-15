@@ -27,16 +27,16 @@ class _splash_screenState extends State<splash_screen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Lottie.asset("assets/Animation - 1710401108592.json"),
-              Text("SET MOOD WITH \n    GOOD MUSIC",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white)),
+               Lottie.asset("assets/Animation - 1710401108592.json"),
+               Text("SET MOOD WITH \n    GOOD MUSIC",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.white)),
                SizedBox(height: 10,),
                Lottie.asset("assets/Animation - 1710402271057.json"),
             ],
                 
           ),
         ),
-
       )
     );
   }
 }
+ 
