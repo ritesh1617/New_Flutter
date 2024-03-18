@@ -1,10 +1,6 @@
+import 'package:musicapp/const/export.dart';
 
-import 'dart:ffi';
 
-import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:on_audio_query/on_audio_query.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class songdataController extends GetxController{
   final audioQuery=OnAudioQuery();

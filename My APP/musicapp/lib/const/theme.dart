@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:musicapp/const/colors.dart';
+import 'package:musicapp/const/export.dart';
 
 final darkTheme = ThemeData(
     useMaterial3: true,

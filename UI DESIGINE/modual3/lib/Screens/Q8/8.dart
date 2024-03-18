@@ -12,8 +12,8 @@ class ImagesAroundText extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/left_top_image.png'),
-                Image.asset('assets/right_top_image.png'),
+                Image.asset('assets/1.jpeg'),
+                Image.asset('assets/2.jpeg'),
               ],
             ),
             SizedBox(height: 20),
@@ -25,8 +25,8 @@ class ImagesAroundText extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('assets/left_bottom_image.png'),
-                Image.asset('assets/right_bottom_image.png'),
+                Image.asset('assets/3.jpeg'),
+                Image.asset('assets/4.jpeg'),
               ],
             ),
           ],

@@ -68,7 +68,10 @@ class _SongPageState extends State<SongPage> {
                     children: songDataController.localsongList.value.map((e) => song_list(
                       onPress: (){
                         songPlayerController.playLocalAudio(e.data);
-                        Get.to(songpage());
+                        Get.to(songpage(
+                          songTitle: e.title,
+                          artistName: e.artist!,
+                        ));
                       },
                       songName: e.title,)).toList()
                    ):Column(

@@ -1,9 +1,13 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:musicapp/const/export.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class songDetail extends StatelessWidget {
-  const songDetail({Key? key}) : super(key: key);
+  final String songTitle;
+  final String artistName;
+  const songDetail({Key? key,required this.songTitle,required this.artistName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,8 @@ class songDetail extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Terabulawa aya h ma",style:Theme.of(context).textTheme.bodyLarge),
+                    Flexible(
+                      child: Text("$songTitle",maxLines:1 ,style:Theme.of(context).textTheme.bodyLarge)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -35,7 +40,7 @@ class songDetail extends StatelessWidget {
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Jubain Nautiyal",style:Theme.of(context).textTheme.bodySmall),
+                    Flexible(child: Text("$artistName",maxLines: 1,style:Theme.of(context).textTheme.bodySmall)),
                     
                   ],
                 ),

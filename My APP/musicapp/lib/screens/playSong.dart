@@ -7,16 +7,15 @@ import 'package:musicapp/custom%20widget/songWave.dart';
 import 'package:musicapp/custom%20widget/songplaybutton.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class songpage extends StatefulWidget {
-  const songpage({Key? key}) : super(key: key);
 
-  @override
-  State<songpage> createState() => _songpageState();
-}
+class songpage extends StatelessWidget {
+  final String songTitle;
+  final String artistName;
+  const songpage({Key? key,required this.songTitle,required this.artistName}) : super(key: key);
 
-class _songpageState extends State<songpage> {
   @override
   Widget build(BuildContext context) {
+    var value=20.0;
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -29,7 +28,10 @@ class _songpageState extends State<songpage> {
                 10.heightBox,
                 song_volume_updown(),
                 20.heightBox,
-                songDetail(),
+                songDetail(
+                  artistName: artistName,
+                  songTitle: songTitle,
+                ),
                 20.heightBox,
                 20.heightBox,
                 Spacer(),

@@ -1,0 +1,15 @@
+export 'package:just_audio/just_audio.dart';
+export 'package:get/get.dart';
+export 'package:flutter/material.dart';
+export 'package:musicapp/Controller/songplayercontroller.dart';
+export 'package:musicapp/const/colors.dart';
+export 'package:musicapp/custom%20widget/songplaybutton.dart';
+export 'package:velocity_x/velocity_x.dart';
+export 'package:on_audio_query/on_audio_query.dart';
+export 'package:permission_handler/permission_handler.dart';
+export 'package:musicapp/screens/splash_Screen/spash_screen.dart';
+export 'package:musicapp/const/theme.dart';
+export 'package:get/get_navigation/src/root/get_material_app.dart';
+export 'dart:async';
+export 'package:lottie/lottie.dart';
+export 'package:musicapp/screens/songPage.dart';

@@ -1,5 +1,5 @@
 
-import 'package:flutter/material.dart';
+import 'package:musicapp/const/export.dart';
 
 class songWave extends StatelessWidget {
   const songWave({Key? key}) : super(key: key);

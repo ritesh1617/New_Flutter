@@ -1,7 +1,6 @@
 
- import 'dart:ui';
 
-import 'package:flutter/material.dart';
+import 'package:musicapp/const/export.dart';
 
 const bgcolor=Color(0xff191B28);
 const fontcolor=Color(0xffFFFFFF);

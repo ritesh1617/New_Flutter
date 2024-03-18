@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:musicapp/Controller/songplayercontroller.dart';
-import 'package:musicapp/const/colors.dart';
-import 'package:musicapp/custom%20widget/songplaybutton.dart';
-import 'package:velocity_x/velocity_x.dart';
+import 'package:musicapp/const/export.dart';
 
 class songControllerButton extends StatelessWidget {
   const songControllerButton({Key? key}) : super(key: key);
@@ -13,17 +8,17 @@ class songControllerButton extends StatelessWidget {
     SongPlayerController songPlayerController=Get.put(SongPlayerController());
     return Column(
       children: [
-        Row(
+       Obx(() =>  Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("2:34"),
+            Text("${songPlayerController.currentTime}"),
             Text("/"),
             Text(
-              "1:20",
+              "${songPlayerController.totalTime}",
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
-        ),
+        ),),
         20.heightBox,
         Padding(
           padding: const EdgeInsets.only(bottom: 10,left: 20),

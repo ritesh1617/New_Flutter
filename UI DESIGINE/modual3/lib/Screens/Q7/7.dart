@@ -38,3 +38,4 @@ class _CheckboxExampleState extends State<CheckboxExample> {
     );
   }
 }
+
