@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:modual3/Screens/Q10/10.dart';
 import 'package:modual3/Screens/Q11/11.dart';
 import 'package:modual3/Screens/Q12/Screen2.dart';
 import 'package:modual3/Screens/Q12/screen1.dart';
+import 'package:modual3/Screens/Q3/inputnumber.dart';
 import 'package:modual3/Screens/Q5/5.dart';
 import 'package:modual3/Screens/Q4/4.dart';
 import 'package:modual3/Screens/Q1/screen2.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
      
-      home:scrreen2(),
+      home:ColorAdjustmentScreen(),
     );
   }
 }
